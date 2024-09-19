@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --min-container-width: 20rem;
+}
+
+@layer components {
+  .primary-btn {
+    @apply border border-black px-4 py-2 text-sm shadow-md shadow-gray-500 duration-300 hover:bg-black hover:text-white md:text-base;
+  }
+  .my-container {
+    @apply container min-w-[var(--min-container-width)];
+  }
+}
