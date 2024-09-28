@@ -40,7 +40,7 @@ const Testimonial = () => {
           picked products
         </p>
       </div>
-      <div className="bg-black">
+      <div className="min-w-[var(--min-container-width)] bg-black">
         <div className="my-container flex flex-col items-stretch justify-between gap-8 px-10 py-10 md:flex-row">
           {testimonials.map((item) => (
             <div
