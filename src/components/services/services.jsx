@@ -46,6 +46,7 @@ const Services = () => {
             className="flex flex-col gap-4 border border-black p-4 duration-300 hover:bg-black hover:text-white hover:shadow-2xl hover:shadow-black"
           >
             <div>
+              {/* 内联元素只能嵌套文字或其他内联元素,不可以嵌套块元素,否则宽度异常,转换为内联块元素可以解决这个问题. */}
               <span className="inline-block rounded-full border border-black p-4 text-xl">
                 {card.icon}
               </span>
