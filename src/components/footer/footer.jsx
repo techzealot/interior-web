@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
         <div>
           <h1 className="text-xl font-bold">Contact us</h1>
-          <ul className="space-y-2">
+          <ul className="mt-4 space-y-4">
             <li className="flex items-center gap-2">
               <FaPhone />
               <a href="tel:123456789">+91 123456789</a>
