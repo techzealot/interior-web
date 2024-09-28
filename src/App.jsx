@@ -1,5 +1,5 @@
-import Banner1 from "./components/banner/Banner1";
-import Banner2 from "./components/banner/Banner2";
+import Banner1 from "./components/banner/banner1";
+import Banner2 from "./components/banner/banner2";
 import Brands from "./components/brands/brands";
 import Hero from "./components/hero/hero";
 import Navbar from "./components/navbar/navbar";
