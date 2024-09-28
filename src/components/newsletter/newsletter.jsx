@@ -5,7 +5,7 @@ const Newsletter = () => {
       <p className="text-gray-500">
         Stay up to date with our latest news and offers
       </p>
-      <div>
+      <div className="flex">
         <input
           type="text"
           className="border border-gray-300 p-4 ring-1 ring-gray-300"
