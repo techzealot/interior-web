@@ -2,8 +2,8 @@ import HeroPng from "../../assets/hero.png";
 
 const Hero = () => {
   return (
-    <div className="my-container mt-8 flex min-h-[30rem] flex-col content-center items-center justify-between gap-4 md:flex-row">
-      <div className="flex max-w-[30rem] flex-col justify-center gap-4 text-center md:text-left">
+    <div className="my-container mt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
+      <div className="flex flex-col justify-center gap-4 text-center md:max-w-[50%] md:text-left">
         <h1 className="text-3xl font-bold">SKETCH LUXURY INTERIOR DESIGN</h1>
         <p className="text-sm text-gray-500">
           Bring your dream to life with one-on-one design help & hand picked

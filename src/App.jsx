@@ -1,13 +1,23 @@
-import Brands from "./components/Brands/Brands";
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
+import Banner1 from "./components/banner/Banner1";
+import Banner2 from "./components/banner/Banner2";
+import Brands from "./components/brands/brands";
+import Hero from "./components/hero/hero";
+import Navbar from "./components/navbar/navbar";
+import Newsletter from "./components/newsletter/newsletter";
+import Services from "./components/services/services";
+import Testimonial from "./components/testimonial/testimonial";
 
 const App = () => {
   return (
-    <main className="mt-10 flex h-screen flex-col gap-8">
+    <main className="mt-10 flex h-screen flex-col gap-20">
       <Navbar />
       <Hero />
       <Brands />
+      <Services />
+      <Banner1 />
+      <Banner2 />
+      <Testimonial />
+      <Newsletter />
     </main>
   );
 };
