@@ -42,7 +42,7 @@ const Services = () => {
         <motion.h1
           variants={slideUp(0.2)}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           className="text-3xl font-bold"
         >
           What we provide
@@ -50,7 +50,7 @@ const Services = () => {
         <motion.p
           variants={slideUp(0.4)}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           className="text-center text-base text-gray-600"
         >
           Bring your dream home to life with one-on-one design
