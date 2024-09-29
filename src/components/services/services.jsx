@@ -1,6 +1,10 @@
 import { FaVectorSquare } from "react-icons/fa";
 import { FaPenToSquare } from "react-icons/fa6";
 import { BiSolidDollarCircle } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { del } from "framer-motion/client";
+import { delay } from "framer-motion";
+import { slideUp } from "../../lib/animate";
 
 const serviceCards = [
   {
@@ -10,6 +14,7 @@ const serviceCards = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur",
     icon: <FaVectorSquare />,
     link: "#",
+    delay: 0.2,
   },
   {
     id: 2,
@@ -18,6 +23,7 @@ const serviceCards = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur",
     icon: <FaPenToSquare />,
     link: "#",
+    delay: 0.4,
   },
   {
     id: 3,
@@ -26,22 +32,38 @@ const serviceCards = [
       "Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet,consectetur adipiscing elit",
     icon: <BiSolidDollarCircle />,
     link: "#",
+    delay: 0.6,
   },
 ];
 const Services = () => {
   return (
     <div className="my-container flex flex-col items-center justify-center gap-8">
       <div className="flex flex-col items-center justify-center gap-2">
-        <h1 className="text-3xl font-bold">What we provide</h1>
-        <p className="text-center text-base text-gray-600">
+        <motion.h1
+          variants={slideUp(0.2)}
+          initial="initial"
+          animate="animate"
+          className="text-3xl font-bold"
+        >
+          What we provide
+        </motion.h1>
+        <motion.p
+          variants={slideUp(0.4)}
+          initial="initial"
+          animate="animate"
+          className="text-center text-base text-gray-600"
+        >
           Bring your dream home to life with one-on-one design
           <br />
           help & hand picked products
-        </p>
+        </motion.p>
       </div>
       <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
         {serviceCards.map((card) => (
-          <div
+          <motion.div
+            variants={slideUp(card.delay)}
+            initial="initial"
+            whileInView="animate"
             key={card.id}
             className="flex flex-col gap-4 border border-black p-4 duration-300 hover:bg-black hover:text-white hover:shadow-2xl hover:shadow-black"
           >
@@ -61,7 +83,7 @@ const Services = () => {
                 Learn More
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

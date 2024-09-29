@@ -1,9 +1,16 @@
 import { FaMessage, FaPhone } from "react-icons/fa6";
 import Logo from "../../assets/Logo.png";
+import { motion } from "framer-motion";
+import { slideLeft } from "../../lib/animate";
 
 const Footer = () => {
   return (
-    <div className="my-container">
+    <motion.footer
+      className="my-container"
+      variants={slideLeft(0.2)}
+      initial="initial"
+      whileInView={"animate"}
+    >
       <div className="grid grid-cols-1 items-start justify-between gap-8 md:grid-cols-3">
         <div className="space-y-4 font-bold">
           <div className="flex items-center gap-2">
@@ -68,7 +75,7 @@ const Footer = () => {
           © 2023 TCJ. All rights reserved
         </p>
       </div>
-    </div>
+    </motion.footer>
   );
 };
 

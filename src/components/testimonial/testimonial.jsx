@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { slideLeft, slideUp } from "../../lib/animate";
+
 const testimonials = [
   {
     id: 1,
@@ -5,6 +8,7 @@ const testimonials = [
     role: "Manager",
     avatar: "https://placehold.co/64x64?text=A",
     starNumer: 5,
+    delay: 0.2,
     comment:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam obcaecati adipisci a odio officia, sit nostrum libero molestias laborum vitae id, eius ex atque illum cupiditate assumenda quam nihil!",
   },
@@ -14,6 +18,7 @@ const testimonials = [
     role: "CEO",
     avatar: "https://placehold.co/64x64?text=J",
     starNumer: 4,
+    delay: 0.4,
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
   },
@@ -23,6 +28,7 @@ const testimonials = [
     role: "Marketing",
     avatar: "https://placehold.co/64x64?text=S",
     starNumer: 3,
+    delay: 0.6,
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi nderit in voluptate",
   },
@@ -32,18 +38,31 @@ const Testimonial = () => {
   return (
     <div className="flex flex-col items-stretch gap-8">
       <div className="my-container flex flex-col items-center gap-4">
-        <h1 className="font-serif text-3xl font-bold">
+        <motion.h1
+          variants={slideUp(0.2)}
+          initial="initial"
+          whileInView="animate"
+          className="font-serif text-3xl font-bold"
+        >
           Words from our coustomers
-        </h1>
-        <p className="max-w-[42ch] text-center text-sm text-gray-500">
+        </motion.h1>
+        <motion.p
+          variants={slideUp(0.4)}
+          initial="initial"
+          whileInView="animate"
+          className="max-w-[42ch] text-center text-sm text-gray-500"
+        >
           Bring your dream home to life with one-on-one design help & hand
           picked products
-        </p>
+        </motion.p>
       </div>
       <div className="min-w-[var(--min-container-width)] bg-black">
         <div className="my-container flex flex-col items-stretch justify-between gap-8 px-10 py-10 md:flex-row">
           {testimonials.map((item) => (
-            <div
+            <motion.div
+              variants={slideLeft(item.delay)}
+              initial="initial"
+              whileInView="animate"
               className="group flex flex-col items-start gap-4 border border-gray-500 p-10 text-gray-500 hover:bg-white"
               key={item.id}
             >
@@ -81,7 +100,7 @@ const Testimonial = () => {
                   {item.comment}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
